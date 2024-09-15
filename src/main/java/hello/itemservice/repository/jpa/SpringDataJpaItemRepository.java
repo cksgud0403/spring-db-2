@@ -11,7 +11,7 @@ public interface SpringDataJpaItemRepository extends JpaRepository<Item, Long> {
 
     List<Item> findByItemNameLike(String itemName);
 
-    List<Item> findByPriceIsLessThan(Integer price);
+    List<Item> findByPriceIsLessThanEqual(Integer price);
 
     //쿼리 메서드 (아래 메서드와 같은 기능 수행)
     List<Item> findByItemNameLikeAndPriceLessThanEqual(String itemName, Integer price);
